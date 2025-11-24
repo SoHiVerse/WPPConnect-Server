@@ -1,21 +1,21 @@
 import { ServerOptions } from './types/ServerOptions';
 
 export default {
-  secretKey: 'THISISMYSECURETOKEN',
-  host: 'http://localhost',
+  secretKey: 'be096b48f2877ef64830024731e0be6d6d31eaf75e4e95dc9d9d396636780cc7',
+  host: 'http://0.0.0.0',
   port: '21465',
-  deviceName: 'WppConnect',
-  poweredBy: 'WPPConnect-Server',
+  deviceName: 'WPPConnect-Meftah',
+  poweredBy: 'WPPConnect-Server-Meftah',
   startAllSession: true,
   tokenStoreType: 'file',
   maxListeners: 15,
   customUserDataDir: './userDataDir/',
   webhook: {
-    url: null,
+    url: 'http://xrm.meftah.com:8088/webhook/WebHookKeyPlaceHolder/',
     autoDownload: true,
     uploadS3: false,
-    readMessage: true,
-    allUnreadOnStart: false,
+    readMessage: false,
+    allUnreadOnStart: true,
     listenAcks: true,
     onPresenceChanged: true,
     onParticipantsChanged: true,
@@ -23,7 +23,7 @@ export default {
     onPollResponse: true,
     onRevokedMessage: true,
     onLabelUpdated: true,
-    onSelfMessage: false,
+    onSelfMessage: true,
     ignore: ['status@broadcast'],
   },
   websocket: {
